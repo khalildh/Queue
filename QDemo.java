@@ -21,7 +21,7 @@ class Queue {
 	}
 
 	public int pop() {
-		if (i > 0 && j < arrSize) {
+		if (i > 0 && j < i) {
 			j++;		
 			return arr[j-1];
 		}
@@ -43,14 +43,27 @@ class QDemo {
 		array.push(4);
 		array.push(5);
 		array.push(6);
+		// array.push(7);
+		// array.push(8);
+		// array.push(9);
+
+		System.out.println(array.pop());
+		System.out.println(array.pop());
+		System.out.println(array.pop());
+		System.out.println(array.pop());
+		System.out.println(array.pop());
+		System.out.println(array.pop());
+
 		array.push(7);
 		array.push(8);
 		array.push(9);
+
 		System.out.println(array.pop());
 		System.out.println(array.pop());
 		System.out.println(array.pop());
 		System.out.println(array.pop());
 		System.out.println(array.pop());
 		System.out.println(array.pop());
+
 	}
 }
