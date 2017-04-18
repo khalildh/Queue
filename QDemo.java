@@ -1,17 +1,18 @@
 class Queue {
 	private int[] arr;
-	private int arrSize;
+	public int length;
 	// the i variable keeps track of the number of pushes, 
 	// j keeps track of the number of pops
 	private int i, j;
 
 	Queue(int size) {
 		arr = new int[size];
-		arrSize = arr.length;
+		length = size;
+		i = j = 0;
 	}
 
 	public boolean push(int x) {
-		if (i < arrSize) {
+		if (i < length) {
 			arr[i] = x;
 			i += 1;
 			printer();
@@ -22,8 +23,7 @@ class Queue {
 
 	public int pop() {
 		if (i > 0 && j < i) {
-			j++;		
-			return arr[j-1];
+			return arr[j++];
 		}
 		return -1;
 	}
