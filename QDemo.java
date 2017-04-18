@@ -14,7 +14,6 @@ class Queue {
 		if (i < arrSize) {
 			arr[i] = x;
 			i += 1;
-
 			printer();
 			return true;
 		}
@@ -34,17 +33,13 @@ class Queue {
 			System.out.print(x + " ");
 		}
 		System.out.println();
-		// System.out.println(arrSize);
 	}
-	
 }
 
 class QDemo {
 	public static void main(String[] args) {
 		Queue array = new Queue(5); 
-
 		array.printer();
-
 		array.push(4);
 		array.push(5);
 		array.push(6);
