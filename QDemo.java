@@ -22,7 +22,11 @@ class Queue {
 	}
 
 	public int pop() {
-		return 0;
+		if (i > 0 && j < arrSize) {
+			j++;		
+			return arr[j-1];
+		}
+		return -1;
 	}
 
 	public void printer() {
@@ -47,8 +51,11 @@ class QDemo {
 		array.push(7);
 		array.push(8);
 		array.push(9);
-
-
-		
+		System.out.println(array.pop());
+		System.out.println(array.pop());
+		System.out.println(array.pop());
+		System.out.println(array.pop());
+		System.out.println(array.pop());
+		System.out.println(array.pop());
 	}
 }
